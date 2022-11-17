@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor1: #5053ff;
+    --cor2: #BDD0FB;
+    --cor3: #FF8E88;
+    --cor4: #FE8077;
+    --cor5: #0A015E;
+}
+
+header {
+      
+    font-family: 'Baloo 2', cursive;
+    font-size: 2em;
+    color: var(--cor5);
+    text-shadow:2px 2px 0px rgba(0, 0, 0, 0.274);
+    background-image: linear-gradient(to bottom, var(--cor2), transparent);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+
+
+}
+
+#logo > img {
+    width: 100px;
+    
+}
+
+nav {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+nav > a {
+    color: var(--cor5);
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover {
+    background-color: var(--cor1);
+    color: var(--cor2);
+}
+
+#about {
+    background-color: #fff;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 70px;
+
+}
+
+.text {
+    width: 50%;
+    font: normal bold 2em 'Baloo 2', cursive;
+    text-align: left;
+
+}
+
+#projects {
+    background-color: #5053ff;
+    padding: 5%;
+    font: normal normal 1em 'Baloo 2', cursive;
+}
+
+#projects > h2 {
+    color: #ffaca8;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.303);
+    font: normal 900 2em 'Baloo 2', cursive;
+}
+
+#projects-itens {
+    
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+
+}
+
+.model {
+    width: 25%;
+    height: 300px;
+    background-color: #BDD0FB;
+    padding: 5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.305);
+
+}
+
+.model > img {
+    width: 75%;
+    border-radius: 15px;
+    
+}
+
+#contact {
+   
+    background-color: #BDD0FB;
+    padding: 30px;
+    font: normal 900 2em 'Baloo 2', cursive;
+    color: #FE8077;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+ 
+}
+
+.social-medias {
+    width: 40px;
+    margin: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+#contact-itens {
+    display: flex;
+    justify-content: start;
+    margin: 30px;
+    padding: 10px;
+
+} 
