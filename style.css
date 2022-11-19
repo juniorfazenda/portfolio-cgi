@@ -2,10 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
 
+@font-face {
+    font-family: 'Pridi', serif;
+    src: url(fonts/Pridi-Regular.ttf), format('truetype');
+}
+
 
 *{
-    margin: 0px;
+    margin: -2px;
     padding: 0px;
+
 }
 
 :root {
@@ -14,46 +20,85 @@
     --cor3: #FF8E88;
     --cor4: #FE8077;
     --cor5: #0A015E;
+
+    --azul1:#36d0ff;
+    --azul2:#82e2ff;
+    --azul3:#2ba6cc;
+    --azul4:#417180;
+    --azul5:#1b6880;
+
+    --laranja1: #ff9d3d;
+    --laranja2: #ffc48a;
+    --laranja3: #cc7e31;
+    --laranja4: #805e3c;
+    --laranja5: #804f1f;
+
+
+}
+
+body {
+    background-color: var(--laranja2)
 }
 
 header {
-      
-    font-family: 'Baloo 2', cursive;
+    display: flex;
+    justify-content: space-around;  
+    font-family: 'Pridi', serif;
     font-size: 2em;
     color: var(--cor5);
     text-shadow:2px 2px 0px rgba(0, 0, 0, 0.274);
-    background-image: linear-gradient(to bottom, var(--cor2), transparent);
+    background-color: var(--laranja2);
     min-height: 150px;
-    text-align: center;
     padding-top: 40px;
-
+    
+    /*Tentativa fixar header
+    position: fixed;
+    top: 0px;
+    width: 100%;*/
 
 }
 
+header > h1 {
+    font-family: 'Pridi', serif;
+}
+    
+
 #logo > img {
-    width: 100px;
+    
+    width: 380px;
+    filter:drop-shadow(4px 4px 9px rgba(0, 0, 0, 0.31));
     
 }
 
-nav {
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.2);
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    
+    
+    
+    
 }
 
-nav > a {
-    color: var(--cor5);
-    padding: 10px;
+
+
+.navbar > li > a {
+    color: #2b2b2b;
+    padding: 20px;
     border-radius: 20px;
+    font-family: 'Baloo 2', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.259);
     text-decoration: none;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1em;
     transition-duration: 0.5s;
 }
 
-nav > a:hover {
-    background-color: var(--cor1);
-    color: var(--cor2);
+.navbar > li > a:hover {
+    text-decoration: underline;
+    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.259);
+    
 }
 
 #about {
@@ -63,25 +108,36 @@ nav > a:hover {
     align-items: center;
     padding: 70px;
 
+    
+
+}
+
+#img-about {
+    
 }
 
 .text {
     width: 50%;
+    color: #2b2b2b;
     font: normal bold 2em 'Baloo 2', cursive;
     text-align: left;
 
 }
 
+.wave {
+    margin: -5px;
+}
+
 #projects {
-    background-color: #5053ff;
+    background-color: var(--azul5);
     padding: 5%;
     font: normal normal 1em 'Baloo 2', cursive;
 }
 
 #projects > h2 {
-    color: #ffaca8;
+    color: var(--laranja1);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.303);
-    font: normal 900 2em 'Baloo 2', cursive;
+    font: normal 900 3em 'Baloo 2', cursive;
 }
 
 #projects-itens {
@@ -95,29 +151,51 @@ nav > a:hover {
 .model {
     width: 25%;
     height: 300px;
-    background-color: #BDD0FB;
+    
     padding: 5px;
-    border-radius: 15px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.305);
+    
+    border-radius: 20px;
+    background: linear-gradient(145deg, #185e73, #1d6f89);
+    box-shadow:  19px 19px 37px #17586d,
+             -19px -19px 37px #1f7893;
 
 }
 
 .model > img {
     width: 75%;
     border-radius: 15px;
+    -webkit-transition: -webkit-transform .5s ease;
+   transition: transform .5s ease;
     
 }
 
+.model:hover img {
+    -webkit-transform: scale(1.1);
+       transform: scale(1.1);
+    
+}
+
+
+
+.subtitle {
+    display: none;
+    background-color: red;
+}
+
+
+
+
 #contact {
    
-    background-color: #BDD0FB;
+    background-color: var(--laranja2);
     padding: 30px;
     font: normal 900 2em 'Baloo 2', cursive;
-    color: #FE8077;
+    color: var(--azul4);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
  
 }
@@ -127,13 +205,15 @@ nav > a:hover {
     margin: 10px;
 }
 
+
+
 li {
     list-style: none;
 }
 
 #contact-itens {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     margin: 30px;
     padding: 10px;
 
